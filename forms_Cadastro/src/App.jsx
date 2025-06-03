@@ -20,8 +20,12 @@ function App() {
       </AppBar>
 
       <Box>
-        {tabIndex === 0 && <RegisterPage />}
-        {tabIndex === 1 && <UsersPage />}
+        <Box sx={{ display: tabIndex === 0 ? 'block' : 'none' }}>
+          <RegisterPage />
+        </Box>
+        <Box sx={{ display: tabIndex === 1 ? 'block' : 'none' }}>
+          <UsersPage />
+        </Box>
       </Box>
     </Container>
   );
